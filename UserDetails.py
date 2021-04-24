@@ -14,13 +14,13 @@ class UserDetails:
         self.deliveryItems['city'] = city
         self.deliveryItems['state'] = state
         self.deliveryItems['zip'] = zip
-        pass
+        return self.deliverItems
 
     def userInfo(self, email, userName, password):
         self.userItems['email'] = email
         self.userItems['userName'] = userName
         self.userItems['password'] = password
-        pass
+        return self.userItems
 
     def paymentInfo(self, cardFirstName, cardLastName, cardNum, expMonth, expYear, cvv, phone):
         self.paymentItems['cardFirstName'] = cardFirstName
@@ -30,14 +30,14 @@ class UserDetails:
         self.paymentItems['city'] = expYear
         self.paymentItems['cvv'] = cvv
         self.paymentItems['cardPhone'] = phone
-        pass
+        return self.paymentItems
 
     def itemInfo(self, itemName, itemID, itemAmount, itemUrl):
         self.productItems['name'] = itemName
         self.productItems['id'] = itemID
         self.productItems['amount'] = itemAmount
         self.productItems['url'] = itemUrl
-        pass
+        return self.productItems
 
     def getFirstName(self):
         return self.deliveryItems['firstName']
